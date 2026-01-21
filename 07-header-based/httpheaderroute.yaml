@@ -1,0 +1,23 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: header-routing
+spec:
+  parentRefs:
+    - name: eg
+  rules:
+    - matches:
+        - headers:
+            - name: env
+              value: prod
+      backendRefs:
+        - name: backend-prod-svc
+          port: 80
+
+    - matches:
+        - headers:
+            - name: env
+              value: dev
+      backendRefs:
+        - name: backend-dev-svc
+          port: 80
