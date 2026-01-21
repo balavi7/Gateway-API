@@ -13,7 +13,7 @@ The project covers multiple real world routing scenarios including **host based 
 ✔️ HTTPRoute examples  
 ✔️ Host-based routing  
 ✔️ Header-based routing  
-✔️ rewrite URL
+✔️ rewrite URL  
 ✔️ Traffic splitting & weighted routing  
 ✔️ TLS configuration using self-signed certificates  
 ✔️ End-to-end testing using `curl`
